@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>vue js own </title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<div id="app">
+		<ul>Todos</ul>
+		<ul v-if="checked">
+		 	<li v-for="i in todos"><span>{{i.title}}</span><button type="button" v-on:click="removeTodo($index)">X</button></li>
+		</ul>	
+		checked or not: {{checked}}
+		<input type="checkbox" v-model="checked">	
+		<input type="text" v-model="message">
+
+		<p>
+			<input type="text" v-model="Text" v-on:keyup.esc="clearText" v-on:keyup.X="addingX" v-on:keyup.enter="createTodo">
+		</p>
+		<p>
+			Counter Value: {{ count }}
+			<button type="button" v-on:click="increaseCount">Increase Counter</button>
+		</p>
+	</div>
+
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
