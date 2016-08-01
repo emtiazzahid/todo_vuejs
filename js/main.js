@@ -3,13 +3,7 @@ new Vue({
 	data: {
 		message: 'hello',
 		Text: '',
-		todos: [
-		{title: 'todo1'},
-		{title: 'todo2'},
-		{title: 'todo3'},
-		{title: 'todo4'},
-		{title: 'todo5'}
-		],
+		todos: [],
 		checked: true,
 		count: 1
 	},
